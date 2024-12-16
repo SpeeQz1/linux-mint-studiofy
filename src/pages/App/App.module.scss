@@ -1,0 +1,332 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+    position: fixed;
+    inset: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #3e3e3e;
+    color: white;
+    flex-shrink: 0;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+    
+    button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .logo {
+    font-weight: bold;
+  }
+  
+  .main {
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    flex-shrink: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .sidebarContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .categoriesWrapper {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+  }
+  
+  .categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .categoryButton {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    text-align: left;
+    cursor: pointer;
+    
+    &.active {
+      background-color: #1b5e20;
+      color: white;
+    }
+    
+    &:hover:not(.active) {
+      background-color: #e0e0e0;
+    }
+  }
+  
+  .presetsWrapper {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+  
+  .divider {
+    margin: 0 0 1rem 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .presets {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(to right, #4caf50, #81c784);
+    color: white;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  
+  .contentWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .contentHeader {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0 1rem 0;
+  }
+  
+  .advancedButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.2s;
+  
+    &.active {
+      background-color: #2196f3;
+      color: white;
+      border-color: #2196f3;
+    }
+  
+    &:hover {
+      background-color: #e0e0e0;
+      
+      &.active {
+        background-color: #1976d2;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+    
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+  }
+  
+  .section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e0e0e0;
+    }
+  }
+  
+  .applications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .appCardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 0 1 calc(33.333% - 1rem);
+    min-width: 250px;
+  }
+  
+  .appCard {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: #e8e8e8;
+    }
+  }
+  
+  .formatsCard {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    border-top: 2px solid #e0e0e0;
+  }
+  
+  .appHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    span {
+      flex: 1;
+    }
+  }
+  
+  .formats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .formatOption {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .infoButton {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+    
+    &:hover {
+      background-color: #1976d2;
+    }
+  }
+  
+  .formats {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .formatOption {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem 0;
+    background-color: white;
+    flex-shrink: 0;
+    margin-top: 1rem;
+    
+    button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      
+      &.installPage {
+        background-color: #f5f5f5;
+        border: 1px solid #e0e0e0;
+      }
+      
+      &.installAll {
+        background-color: #4caf50;
+        color: white;
+        
+        &:hover {
+          background-color: #43a047;
+        }
+      }
+      
+      &.resetPage {
+        background-color: #f44336;
+        color: white;
+        
+        &:hover {
+          background-color: #e53935;
+        }
+      }
+    }
+  }
